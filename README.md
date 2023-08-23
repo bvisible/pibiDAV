@@ -5,16 +5,12 @@ MIT# pibiDAV
 ## Requirements
 Requires a Frappe server instance (refer to https://github.com/frappe/frappe), and has dependencies on CalDAV (refer to https://github.com/python-caldav/caldav) and iCalendar (refer to https://github.com/collective/icalendar). It also uses a tweaked code of pyocclient but this is embedded already in pibiDAV.
 ## Compatibility
-PibiDAV has been tested on Frappe/ERPNext version-13 only.
+PibiDAV has been tested on Frappe/ERPNext version-14 only.
 ## Installation
 From the frappe-bench folder, execute
 ```
-$ bench get-app pibidav --branch develop https://github.com/pibico/pibidav.git
-$ bench install-app pibidav
-```
-If you are using a multi-tenant environment, use the following command
-```
-$ bench --site site_name install-app pibidav
+$ bench get-app pibidav --branch version-14 https://github.com/bvisible/pibiDAV.git
+$ bench --site prod.local install-app pibidav
 ```
 ## Features
 Once is installed, be aware that you will need to set **developer_mode = 1** on your site_config.json file. Also it is a must to have SSL active in both servers Frappe and NextCloud with specific certificates (wildcard *.domain.com* certificates are not valid for this integration). Letsencrypt Certificates are valid for both servers. 
